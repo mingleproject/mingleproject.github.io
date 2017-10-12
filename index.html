@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/><title>Mingle Project</title></head>
+<body>
+<h2>The Mingle Project</h2>
+
+<h3>Activities</h3>
+
+<ul>
+<li>Between 9/2012-8/2013, we performed the following activities:
+<ul>
+<li>Energy-efficient Multi-radio Distance Estimation -
+
+In an ideal world, distance can be estimated using received signal strength indication (RSSI) and compared to a baseline collected in a calibration phase. Unfortunately, RSSI is an unreliable metric in any environment due to the two-ray ground model and multipath interference. The result is a fluctuation in signal strength due to alternating constructive and destructive self-interference.  Because of this, the signal strength values are not unique, and cannot be used for proper distance estimation.
+
+However, this problem can be alleviated by using multiple readings, for example, from multiple antennas. By varying the heights on the radios, it is possible to differentiate between troughs and larger distances because at least one radio will not be in a trough.  This is because the intervals with which the radios experience constructive and destructive interference are not equal. Once both signal strengths are collected, the final distance estimate can be calculated.
+
+We evaluted our aproach using two sensor motes equipped with ZigBee radios. All RSSI values were collected from pairs of omnidirectional radios. To train the system, baseline values are collected at unit distance, and during testing, collected RSSI values are scaled up by the ratio between unit distance and the actual distance.
+
+<li>Relative Orientation Estimation -
+
+To determine direction, signal strength must be unique across the angles at which the subjects are facing. To allow this to be true, the raw signal strength value is scaled by the maximum detected RSSI to account for the decrease in signal strength due to distance.  To increase the accuracy of angle estimation, it is possible to compensate for the variability of RSSI values using a directional antenna. Although this does produce fairly accurate results, it is unfortunately not a very practical option due to size and cost. Instead, it is possible to use the secondary antenna from the distance
+estimation along with the natural interference caused by the subject's body to simulate directionality. In humans, for example, the most accurate results can be obtained by placing one radio in front of the chest, simulating a directional antenna, and one on the side of the knee, reducing interference caused by the body as much as possible. With this method we were able to predict with up to 98% accuracy if the subject is facing within 15 degrees of the normal, and 99% accuracy if the subject is facing within 90 degrees of the normal. Both are accomplished by analyzing the signal strength of packets sent from the chest radio to the other subject's knee radio.
+</ul>
+<li>Between 9/2013-8/2014, we performed the following activities:
+<ul>
+<li>We are aggregating baseline interaction datasets, such as tracking with GPS (e.g., baboons) and image/observation-based interactions (e.g., zebras, giraffes) in order to have a different mode of the grownd truth of proximity interactions
+<li>We are collecting data to understand human biases in defining interactions of animals and starting to define the resulting bias models
+<li>Using social network to inform/improve the context of proximity sensing: we are focusing on the question of network inference from proximity data and evaluating its stability and sensitivity to data noise, as well as its correlation to other network modalities. A comprehensive survey on network inference is in preparation. We are working on the measures of network similarity appropriate to compare different modalities on the same set of individuals.
+<li>We have been continuing to study the foraging ecology of the cottontail rabbits at the UIC greenhouse, gaining a sense of their ecology, foraging dynamics and population dynamics.  This forms the necessary baseline for our applications to establish the context of different modalities of interactions, in order to determine the right spatiotemporal scales of the proximity network to be measured by the designed sensors.  In addition, we have been investigating alternative organisms, cows at Kellogg Biological Stations, for instance, that may provide more successful animal subjects given their size and existing instrumentation. 
+</ul>
+<li>Between 9/2014-8/2015, PI Berger-Wolf focused on two goals: 
+<ul>
+<li>Enabling feedback for robust translation of sensor data into social networks, enabling analysis performed on social networks, as well as using the social network to inform/improve the context of data collection for sensors.
+<li>Mobility Tracking: develop algorithms to integrate knowledge of an animal's mobility with  knowledge of the interactions.
+</ul>
+<li>Between 9/2015-8/2016, we designed a new sensing collar for large (horses) and small (bunnies) animals, using mulitple Bluetooth Low Energy radios and small accellerometer/gyroscope sensors. By combing the results from the multiple sensors, the system aims to track the proximity and relative location of the animals. We also developed a framework to synthesize proximity, location and speed data extracted from sensors with several different configurations and approaches to infer animal interactions. Evaluated the methodology on a synthetic case study where we perform different analyses to understand when our models are fit for the inference task, what are the most critical parameters impacting their performances and when we should start assuming independence conditions to simplify the task.
+<li>Between 9/2016-8/2017, we tested 4 different configurations for a harness suitable for animals sized close to rabbits. Each harness had at least GPS, BLE, WiFi, accelerometer, compass and gyroscopic functionality.  We tested various components for each of these functionalities as well as main processors.  We have narrowed the component list to two groups of devices and have identified challenges related to electromagnetic inference between components as well as data speed limitations of the two main architectures, both based on ATMEL processors such as those found in the popular Arduinos.  
+</ul>
+
+<h3>Outcomes</h3>
+
+Gathering high frequency and accurate data to generate strong characterizations of social networks to better understand the dynamics that shape the development of social relationships requires precise locations, directionality of movement, and type of movement.  The digital representations have to be proven to match what is visually detectable.  Once confirmed then continuous remotely gathered data on a full set of social interactors can be acquired under free ranging conditions.  And from the social metrics that emerge, the causes and consequences of societies can be deduced.  This has been difficult if not impossible to do until now.  At this point we have validated the accuracy of remotely sensed data and have applied it to assess social disturbances.  With the new sensors (from UIUC), then the better algorithms being developed at UIC will be applied to more varied social perturbations to unlock the dynamics social interactions and their various impacts.
+
+<h3>Publications</h3>
+<ul>
+<li>ETTORE RANDAZZO. Inferring Interaction Network from Sensor Data. University of Illinois at Chicago. 2016
+<li>J. Zhao. Horsing around: quantifying the resilience of the social networks of equus caballus. Princeton University. 2016.
+<li>Li, J.*, Brugere, I.*, Ziebart, B., Berger-Wolf, T., Crofoot, M., Farine, D. (2015). Social Information Improves Location Prediction in the Wild. 2015 International Workshop on Trajectory-based Behaviour Analytics (TrBA'15). Austin, TX.
+<li>Jonathan Crall, Charles Stewart, Tanya Y. Berger-Wolf, Daniel Rubenstein (2013). HotSpotter - Species Independent Animal Instance Recognition. Proceedings of the Workshop on the Applications of Computer Vision (WACV). Clearwater Beach, Florida.
+<li>Chayant Tantipathananandh Habiba and Tanya Berger-Wolf (2013). Dynamic networks generative model for skewed component distribution. SIAM Workshop on Network Science.
+<li>Chayant Tantipathananandh Haibiba and Tanya Berger-Wolf (2013). Effect of network structure on influence maximization in dynamic networks. SIAM Workshop on Network Science. San Diego, CA.
+</ul>
+
+<h3>Personnel</h3>
+
+<p><b>PI</b><br>
+Kravets, Robin</p>
+
+<p>
+<b>Co-PIs</b><br>
+Berger-Wolf, Tanya<br>
+Brown, Joel<br>
+Hu, Yih-Chun</p>
+
+<p>
+<b>Gradute Students</b><br>
+Ashraf, Farhana<br>
+Brugere, Ivan<br>
+Habiba, Habiba<br>
+Randazzo, Ettore<br>
+Tantipathananandh, Chayant</p>
+
+<h3>Funding</h3>
+
+The Mingle project gratefully acknowledges 
+the support of NSF contract number 1248080.
+
+</body></html>
